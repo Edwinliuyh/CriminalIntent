@@ -1,9 +1,11 @@
 package com.bignerdranch.android.criminalintent;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +54,7 @@ public class CrimeFragment extends Fragment{
 		});
 
 		mDateButton=(Button)v.findViewById(R.id.crim_date);
-		mDateButton.setText(mCrime.getDate().toString());
+		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 kk:mm EEEE",mCrime.getDate()));
 		mDateButton.setEnabled(false);
 
 		mSolvedCheckBox=(CheckBox)v.findViewById(R.id.crime_solved);

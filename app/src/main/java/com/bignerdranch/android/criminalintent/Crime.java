@@ -11,7 +11,6 @@ public class Crime {
 	private boolean mSolved;
 	
 	public Crime(){
-		//生成唯一标识符
 		mId=UUID.randomUUID();
 		mDate = new Date();
 	}
