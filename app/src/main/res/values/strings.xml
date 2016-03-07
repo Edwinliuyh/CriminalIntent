@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CriminalIntent</string>
+    <string name="title_activity_crime">CrimeActivity</string>
+    <string name="crime_title_hint">请输入不文明行为的标题</string>
+    <string name="crime_title_lable">标题</string>
+    <string name="crime_details_lable">具体事项</string>
+    <string name="crime_solved_lable">解决了？</string>
+
+
+</resources>
