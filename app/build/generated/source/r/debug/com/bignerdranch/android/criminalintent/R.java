@@ -24,7 +24,7 @@ public final class R {
         public static final int fragmentContainer=0x7f070000;
     }
     public static final class layout {
-        public static final int activity_crime=0x7f030000;
+        public static final int activity_fragment =0x7f030000;
         public static final int fragment_crime=0x7f030001;
     }
     public static final class string {

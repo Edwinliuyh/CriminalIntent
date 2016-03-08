@@ -14,6 +14,9 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+/**
+ * Crime的控制层
+ */
 public class CrimeFragment extends Fragment{
 	private Crime mCrime;
 	private EditText mTitleField;

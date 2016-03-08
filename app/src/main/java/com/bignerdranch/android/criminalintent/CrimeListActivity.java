@@ -6,13 +6,13 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 
 /**
- * 用于托管CrimeFragment
+ * 用于托管CrimeListFragment
  */
-public class CrimeActivity extends SingleFragmentActivity {
+public class CrimeListActivity extends SingleFragmentActivity {
 
 
     @Override
     protected Fragment createFragment() {
-        return new CrimeFragment();
+        return new CrimeListFragment();
     }
 }

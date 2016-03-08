@@ -9,11 +9,25 @@ public class Crime {
 	private String mTitle;
 	private Date mDate;
 	private boolean mSolved;
-	
+
+	/**
+	 *  模型层Crime类
+	 */
 	public Crime(){
 		mId=UUID.randomUUID();
 		mDate = new Date();
 	}
+
+	/**
+	 * ListView调用adapter的getView(...)依赖于toString()方法。它首先生成布
+	 局视图，然后找到指定位置的Crime对象并对其调用toString()方法，最后得到字符串信息并传
+	 递给TextView。
+	 */
+	@Override
+	public String toString() {
+		return mTitle;
+	}
+
 
 	public UUID getId() {
 		return mId;
