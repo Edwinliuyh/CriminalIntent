@@ -140,8 +140,27 @@
                     "startLine": 9,
                     "startColumn": 4,
                     "startOffset": 432,
+                    "endColumn": 48,
+                    "endOffset": 476
+                },
+                "from": {
+                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 391,
+                        "endColumn": 48,
+                        "endOffset": 435
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 481,
                     "endColumn": 62,
-                    "endOffset": 490
+                    "endOffset": 539
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml",
@@ -156,12 +175,12 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 495,
-                    "endLine": 16,
+                    "startOffset": 544,
+                    "endLine": 17,
                     "endColumn": 12,
-                    "endOffset": 781
+                    "endOffset": 830
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\styles.xml",
@@ -177,12 +196,12 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 786,
-                    "endLine": 19,
+                    "startOffset": 835,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 941
+                    "endOffset": 990
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\styles.xml",

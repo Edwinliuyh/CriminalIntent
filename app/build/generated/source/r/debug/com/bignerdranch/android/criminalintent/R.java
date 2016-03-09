@@ -24,7 +24,7 @@ public final class R {
         public static final int fragmentContainer=0x7f070000;
     }
     public static final class layout {
-        public static final int activity_fragment =0x7f030000;
+        public static final int activity_fragment=0x7f030000;
         public static final int fragment_crime=0x7f030001;
     }
     public static final class string {
@@ -33,7 +33,8 @@ public final class R {
         public static final int crime_solved_lable=0x7f060002;
         public static final int crime_title_hint=0x7f060003;
         public static final int crime_title_lable=0x7f060004;
-        public static final int title_activity_crime=0x7f060005;
+        public static final int crimes_title=0x7f060005;
+        public static final int title_activity_crime=0x7f060006;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

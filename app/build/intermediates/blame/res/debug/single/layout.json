@@ -4,7 +4,7 @@
         "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\fragment_crime.xml"
     },
     {
-        "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_crime.xml",
-        "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\activity_crime.xml"
+        "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_fragment.xml",
+        "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\activity_fragment.xml"
     }
 ]
