@@ -1,7 +1,6 @@
-package com.bignerdranch.android.criminalintent;
+package com.bignerdranch.android.criminalintent.Fragment;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +12,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+
+import com.bignerdranch.android.criminalintent.Model.Crime;
+import com.bignerdranch.android.criminalintent.R;
 
 /**
  * Crime的控制层

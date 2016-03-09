@@ -1,15 +1,18 @@
-package com.bignerdranch.android.criminalintent;
+package com.bignerdranch.android.criminalintent.Activity;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.bignerdranch.android.criminalintent.R;
+
 /**
  * 通用的托管单一Fragment的Activity模板
  * 抽象类，抽象类的子类必须要实现抽象类中未完成的方法createFragment()
  */
 public abstract class SingleFragmentActivity extends FragmentActivity {
+
     protected abstract Fragment createFragment();
 
     @Override

@@ -1,9 +1,8 @@
-package com.bignerdranch.android.criminalintent;
+package com.bignerdranch.android.criminalintent.Activity;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.os.Bundle;
+
+import com.bignerdranch.android.criminalintent.Fragment.CrimeListFragment;
 
 /**
  * 用于托管CrimeListFragment

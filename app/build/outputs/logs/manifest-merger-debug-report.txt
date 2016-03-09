@@ -37,10 +37,10 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\dell\AndroidStudioP
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:13:9-45
 	android:theme
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:15:9-40
-activity#com.bignerdranch.android.criminalintent.CrimeListActivity
+activity#com.bignerdranch.android.criminalintent.Activity.CrimeListActivity
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:16:9-22:20
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:16:19-52
+		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:16:19-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:17:9-21:25
 action#android.intent.action.MAIN
@@ -51,9 +51,9 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:13-73
 	android:name
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:23-70
-activity#com.bignerdranch.android.criminalintent.CrimeActivity
+activity#com.bignerdranch.android.criminalintent.Activity.CrimeActivity
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-26:20
 	android:label
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:13-42
+		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:13-51
