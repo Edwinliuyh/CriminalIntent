@@ -1,6 +1,7 @@
 package com.bignerdranch.android.criminalintent.Fragment;
 
 import android.app.ListFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.bignerdranch.android.criminalintent.Activity.CrimeActivity;
 import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
 import com.bignerdranch.android.criminalintent.R;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 public class CrimeListFragment extends ListFragment {
     private ArrayList<Crime> mCrimes;
     private static final String TAG="CrimeListFragment";
+    private static final int REQUEST_CRIME=1;
 
     /**
      * 生成视图
@@ -43,7 +46,16 @@ public class CrimeListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Crime c = ((CrimeAdapter) getListAdapter()).getItem(position);//通过点击的位置获得Crime
-        Log.d(TAG,c.getTitle()+"was called");
+        Intent i = new Intent(getActivity(), CrimeActivity.class);
+        i.putExtra(CrimeFragment.EXTRA_CRIME_ID,c.getId());//附加Crime对象的信息
+        startActivityForResult(i,REQUEST_CRIME);//启动CrimeActivity
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode==REQUEST_CRIME){
+            //handle result
+        }
     }
 
     /**
@@ -73,5 +85,14 @@ public class CrimeListFragment extends ListFragment {
 
             return convertView;
         }
+    }
+
+    /**
+     * 恢复视图时，用adpter通知模型层数据变更，重新加载
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((CrimeAdapter)getListAdapter()).notifyDataSetChanged();
     }
 }
