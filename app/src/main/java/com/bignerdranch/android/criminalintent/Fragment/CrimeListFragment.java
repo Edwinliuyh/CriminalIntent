@@ -11,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.bignerdranch.android.criminalintent.Activity.CrimeActivity;
+import com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity;
 import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
 import com.bignerdranch.android.criminalintent.R;
@@ -46,7 +46,7 @@ public class CrimeListFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Crime c = ((CrimeAdapter) getListAdapter()).getItem(position);//通过点击的位置获得Crime
-        Intent i = new Intent(getActivity(), CrimeActivity.class);
+        Intent i = new Intent(getActivity(), CrimePagerActivity.class);
         i.putExtra(CrimeFragment.EXTRA_CRIME_ID,c.getId());//附加Crime对象的信息
         startActivityForResult(i,REQUEST_CRIME);//启动CrimeActivity
     }
