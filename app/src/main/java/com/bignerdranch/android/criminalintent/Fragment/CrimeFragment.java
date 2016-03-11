@@ -1,8 +1,12 @@
 package com.bignerdranch.android.criminalintent.Fragment;
 
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -13,10 +17,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+
 import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
 import com.bignerdranch.android.criminalintent.R;
+
+import java.util.Date;
 import java.util.UUID;
+
 
 /**
  * Crime的控制层
@@ -28,6 +36,8 @@ public class CrimeFragment extends Fragment {
 	private CheckBox mSolvedCheckBox;
 	public static final String EXTRA_CRIME_ID=
 			"com.bignerdranch.android.criminalintent.crime_id";
+	private static final String DIALOG_DATE="date";
+	private static final int REQUEST_DATE=0;
 
 	/**
 	 * 输入crimeId返回CrimeFragment（用Bundle携带信息）
@@ -52,7 +62,7 @@ public class CrimeFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
-			Bundle savedInstanceState) {
+							 Bundle savedInstanceState) {
 		View v= inflater.inflate(R.layout.fragment_crime, parent, false);
 		
 		mTitleField = (EditText) v.findViewById (R.id.crime_title);
@@ -78,8 +88,17 @@ public class CrimeFragment extends Fragment {
 		});
 
 		mDateButton=(Button)v.findViewById(R.id.crim_date);
-		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 kk:mm EEEE",mCrime.getDate()));
-		mDateButton.setEnabled(false);
+		updateDate();
+		mDateButton.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				FragmentManager fm =getActivity().getSupportFragmentManager();
+				DatePickerFragment dialog = DatePickerFragment
+						.newInstance(mCrime.getDate());//获得AlertDialog所在的Fragment
+				dialog.setTargetFragment( CrimeFragment.this, REQUEST_DATE);//设置dialog的目标fragment
+				dialog.show(fm, DIALOG_DATE);//显示对话框
+			}
+		});
 
 		mSolvedCheckBox=(CheckBox)v.findViewById(R.id.crime_solved);
 		mSolvedCheckBox.setChecked(mCrime.isSolved());
@@ -94,8 +113,24 @@ public class CrimeFragment extends Fragment {
 		
 	}
 
+	@Override
+	//响应DatePicker对话框，更新Crime的数据，更新按钮的文本
+	public void onActivityResult(int requestCode, int resultCode, Intent data){
+		if(resultCode!= Activity.RESULT_OK) return;
+		if(requestCode==REQUEST_DATE){
+			Date date = (Date)data
+					.getSerializableExtra(DatePickerFragment.EXTRA_DATE);
+			mCrime.setDate(date);
+			updateDate();
+		}
+	}
+
 	public void returnResult(){
 		getActivity().setResult(Activity.RESULT_OK,null);
+	}
+
+	public void updateDate(){
+		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 kk:mm EEEE",mCrime.getDate()));
 	}
 
 }

@@ -51,9 +51,9 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:13-73
 	android:name
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:23-70
-activity#com.bignerdranch.android.criminalintent.Activity.CrimeActivity
+activity#com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity
 ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-26:20
 	android:label
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:25:13-45
 	android:name
-		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:13-51
+		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:13-56

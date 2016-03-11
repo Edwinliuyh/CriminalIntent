@@ -8,6 +8,7 @@
     <string name="crime_details_lable">具体事项</string>
     <string name="crime_solved_lable">解决了？</string>
     <string name="crimes_title">所有不文明行为</string>
+    <string name="date_picker_title">发生的日期</string>
 
 
 </resources>
