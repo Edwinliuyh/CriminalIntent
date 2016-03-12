@@ -22,6 +22,7 @@ import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
 import com.bignerdranch.android.criminalintent.R;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
@@ -33,11 +34,14 @@ public class CrimeFragment extends Fragment {
 	private Crime mCrime;
 	private EditText mTitleField;
 	private Button mDateButton;
+	private Button mTimeButton;
 	private CheckBox mSolvedCheckBox;
 	public static final String EXTRA_CRIME_ID=
 			"com.bignerdranch.android.criminalintent.crime_id";
 	private static final String DIALOG_DATE="date";
+	private static final String DIALOG_TIME="time";
 	private static final int REQUEST_DATE=0;
+	private static final int REQUEST_TIME=1;
 
 	/**
 	 * 输入crimeId返回CrimeFragment（用Bundle携带信息）
@@ -94,9 +98,24 @@ public class CrimeFragment extends Fragment {
 			public void onClick(View v) {
 				FragmentManager fm =getActivity().getSupportFragmentManager();
 				DatePickerFragment dialog = DatePickerFragment
-						.newInstance(mCrime.getDate());//获得AlertDialog所在的Fragment
-				dialog.setTargetFragment( CrimeFragment.this, REQUEST_DATE);//设置dialog的目标fragment
+						.newInstance(mCrime.getDate());//从CrimeFragment传Date数据给dialog
+				dialog.setTargetFragment( CrimeFragment.this, REQUEST_DATE);//设置dialog的回传目标
 				dialog.show(fm, DIALOG_DATE);//显示对话框
+			}
+		});
+
+		mTimeButton=(Button)v.findViewById(R.id.crim_time);
+		updateTime();
+		mTimeButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				FragmentManager fm=getActivity()
+						.getSupportFragmentManager();
+				TimePickerFragment dialog= TimePickerFragment
+						.newInstance(mCrime.getDate());//从CrimeFragment传Date数据给dialog
+				dialog.setTargetFragment(CrimeFragment.this,REQUEST_TIME);//设置dialog的回传目标
+				dialog.show(fm,DIALOG_TIME);
+
 			}
 		});
 
@@ -123,6 +142,13 @@ public class CrimeFragment extends Fragment {
 			mCrime.setDate(date);
 			updateDate();
 		}
+		if(requestCode==REQUEST_TIME){
+			Date date = (Date)data
+					.getSerializableExtra(TimePickerFragment.EXTRA_TIME);
+			mCrime.setDate(date);
+			updateTime();
+		}
+
 	}
 
 	public void returnResult(){
@@ -130,7 +156,13 @@ public class CrimeFragment extends Fragment {
 	}
 
 	public void updateDate(){
-		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 kk:mm EEEE",mCrime.getDate()));
+		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 EEEE",mCrime.getDate()));
+
 	}
+
+	public void updateTime(){
+		mTimeButton.setText(DateFormat.format("kk:mm",mCrime.getDate()));
+	};
+
 
 }

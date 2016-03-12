@@ -10,6 +10,7 @@
     <string name="crime_title_lable">标题</string>
     <string name="crimes_title">所有不文明行为</string>
     <string name="date_picker_title">发生的日期</string>
+    <string name="time_picker_title">发生的时间</string>
     <string name="title_activity_crime">CrimeActivity</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

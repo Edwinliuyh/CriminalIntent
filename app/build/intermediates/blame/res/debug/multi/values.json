@@ -35,14 +35,7 @@
                     "endOffset": 203
                 },
                 "from": {
-                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\ids.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 59,
-                        "endColumn": 38,
-                        "endOffset": 93
-                    }
+                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\ids.xml"
                 }
             },
             {
@@ -126,14 +119,7 @@
                     "endOffset": 567
                 },
                 "from": {
-                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 441,
-                        "endColumn": 51,
-                        "endOffset": 488
-                    }
+                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -141,8 +127,27 @@
                     "startLine": 12,
                     "startColumn": 4,
                     "startOffset": 572,
+                    "endColumn": 51,
+                    "endOffset": 619
+                },
+                "from": {
+                    "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 494,
+                        "endColumn": 51,
+                        "endOffset": 541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 624,
                     "endColumn": 62,
-                    "endOffset": 630
+                    "endOffset": 682
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\strings.xml"
@@ -150,12 +155,12 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 635,
-                    "endLine": 19,
+                    "startOffset": 687,
+                    "endLine": 20,
                     "endColumn": 12,
-                    "endOffset": 921
+                    "endOffset": 973
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\styles.xml"
@@ -163,12 +168,12 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 926,
-                    "endLine": 22,
+                    "startOffset": 978,
+                    "endLine": 23,
                     "endColumn": 12,
-                    "endOffset": 1081
+                    "endOffset": 1133
                 },
                 "from": {
                     "file": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\values\\styles.xml"
