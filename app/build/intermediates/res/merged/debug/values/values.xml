@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <item name="viewPaper" type="id"/>
+    <string name="add_crime">创建crime记录</string>
     <string name="app_name">CriminalIntent</string>
     <string name="crime_details_lable">具体事项</string>
     <string name="crime_solved_lable">解决了？</string>
@@ -10,6 +11,12 @@
     <string name="crime_title_lable">标题</string>
     <string name="crimes_title">所有不文明行为</string>
     <string name="date_picker_title">发生的日期</string>
+    <string name="delete_crime">Delete</string>
+    <string name="empty_view">没有crime记录显示</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="new_crime"> New Crime</string>
+    <string name="show_subtitle">Show Subtitle</string>
+    <string name="subtitle">If you see something, say something</string>
     <string name="time_picker_title">发生的时间</string>
     <string name="title_activity_crime">CrimeActivity</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">

@@ -8,6 +8,10 @@
         "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\dialog_time.xml"
     },
     {
+        "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_crime_list.xml",
+        "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\fragment_crime_list.xml"
+    },
+    {
         "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_fragment.xml",
         "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\activity_fragment.xml"
     },

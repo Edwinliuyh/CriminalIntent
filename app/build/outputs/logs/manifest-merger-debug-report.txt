@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:3:5-54
 		INJECTED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
@@ -27,7 +27,7 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\dell\AndroidStudioP
 		INJECTED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:11:5-27:19
+ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:11:5-30:19
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:14:9-41
@@ -52,8 +52,14 @@ ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:20:23-70
 activity#com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity
-ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-26:20
+ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:23:9-29:20
 	android:label
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:25:13-45
 	android:name
 		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:24:13-56
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:26:13-28:62
+	android:value
+		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:28:17-60
+	android:name
+		ADDED from C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\AndroidManifest.xml:27:17-63
