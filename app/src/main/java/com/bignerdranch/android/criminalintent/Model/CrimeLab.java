@@ -1,6 +1,7 @@
 package com.bignerdranch.android.criminalintent.Model;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -9,6 +10,10 @@ import java.util.UUID;
  * 模型层CrimeLab，包含Crimes和get方法
  */
 public class CrimeLab {
+    private static final String TAG ="CrimeLab";
+    private static final String FILENAME = "crimes.json";
+    private CriminalIntentJSONSerializer mSerializer;
+
     private static CrimeLab sCrimeLab;
     private Context mAppContext;
     private ArrayList<Crime> mCrimes;
@@ -18,7 +23,13 @@ public class CrimeLab {
      */
     public CrimeLab(Context appContext) {
         mAppContext = appContext;
-        mCrimes= new ArrayList<Crime>();
+        mSerializer = new CriminalIntentJSONSerializer(mAppContext, FILENAME);//初始化Serializer
+        try{
+            mCrimes=mSerializer.loadCrimes(); //从文件加载crime数据
+        }catch (Exception e){
+            mCrimes = new ArrayList<Crime>(); //如加载失败，则新建一个空数组列表
+            Log.e(TAG,"Error loading crimes:",e);
+        }
     }
 
     /**
@@ -56,5 +67,18 @@ public class CrimeLab {
         mCrimes.add(c);
     }
 
+    /**
+     *在CrimeLab类中保存crime记录
+     */
+    public boolean saveCrimes(){
+        try{
+            mSerializer.saveCrimes(mCrimes);
+            Log.d(TAG,"crimes saved to file");
+            return true;
+        }catch (Exception e){
+            Log.e(TAG,"Error saving crimes:", e);
+            return false;
+        }
+    }
 
 }
