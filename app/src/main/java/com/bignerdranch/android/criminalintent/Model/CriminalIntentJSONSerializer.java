@@ -1,13 +1,17 @@
 package com.bignerdranch.android.criminalintent.Model;
 
 import android.content.Context;
+import android.os.Environment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,8 +42,12 @@ public class CriminalIntentJSONSerializer {
             //Write the file to disk
             Writer writer = null;
             try{
-                OutputStream out = mContext
-                        .openFileOutput(mFilename, Context.MODE_PRIVATE);
+                OutputStream out=null;
+                if ((Environment.getExternalStorageState()).equals(Environment.MEDIA_MOUNTED)){
+                    out=new FileOutputStream(new File(Environment.getExternalStorageDirectory(), mFilename));
+                }else{
+                    out = mContext.openFileOutput(mFilename, Context.MODE_PRIVATE);
+                }
                 writer = new OutputStreamWriter(out);
                 writer.write(array.toString()); //JSONArray转为字符串写入文件
             }finally{
@@ -56,7 +64,12 @@ public class CriminalIntentJSONSerializer {
         BufferedReader reader=null;
         try{
             //IO流将字符串文件逐行转为 StringBuilder
-            InputStream in = mContext.openFileInput(mFilename);
+            InputStream in=null;
+            if ((Environment.getExternalStorageState()).equals(Environment.MEDIA_MOUNTED)){
+                in =new FileInputStream(new File(Environment.getExternalStorageDirectory(), mFilename));
+            }else{
+                in = mContext.openFileInput(mFilename);
+            }
             reader = new BufferedReader(new InputStreamReader(in));
             StringBuilder jsonString = new StringBuilder();
             String line=null;
