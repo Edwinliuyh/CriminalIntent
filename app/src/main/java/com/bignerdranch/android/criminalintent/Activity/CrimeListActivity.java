@@ -5,7 +5,7 @@ import android.app.Fragment;
 import com.bignerdranch.android.criminalintent.Fragment.CrimeListFragment;
 
 /**
- * 用于托管CrimeListFragment
+ * 托管CrimeListFragment的Activity
  */
 public class CrimeListActivity extends SingleFragmentActivity {
 

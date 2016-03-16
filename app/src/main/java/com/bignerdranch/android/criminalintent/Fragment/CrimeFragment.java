@@ -31,9 +31,6 @@ import java.util.Date;
 import java.util.UUID;
 
 
-/**
- * Crime的控制层
- */
 public class CrimeFragment extends Fragment {
 	private Crime mCrime;
 	private EditText mTitleField;
@@ -48,7 +45,7 @@ public class CrimeFragment extends Fragment {
 	private static final int REQUEST_TIME=1;
 
 	/**
-	 * 输入crimeId返回CrimeFragment（用Bundle携带信息）
+	 * 将crimeId放入返回的CrimeFragment实例（Bundle）
 	 */
 	public static CrimeFragment newInstance(UUID crimeId){
 		Bundle args =new Bundle();
@@ -58,6 +55,9 @@ public class CrimeFragment extends Fragment {
 		return fragment;
 	};
 
+	/**
+	 * 在OnCreate，获得Bundle的crimeId，并通过crimeId寻找到对应的Crime
+     */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -65,11 +65,11 @@ public class CrimeFragment extends Fragment {
 		UUID crimeId=(UUID)getArguments()
 				.getSerializable(EXTRA_CRIME_ID);
 		mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
-		setHasOptionsMenu(true);//开启选项菜单
+		setHasOptionsMenu(true);//开启右上角选项菜单
 	}
 
 	/**
-	 * 响应图标Home键
+	 * 响应图标Home键，向上导航的方法
      */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
@@ -86,7 +86,7 @@ public class CrimeFragment extends Fragment {
 	}
 
 	/**
-	 * 在onPause()方法中保存数据
+	 * 在onPause()方法中调用保存数据的方法
 	 */
 	@Override
 	public void onPause(){
@@ -94,6 +94,9 @@ public class CrimeFragment extends Fragment {
 		CrimeLab.get(getActivity()).saveCrimes();
 	}
 
+	/**
+	 *在onCreateView，生成视图、获得控件、加监听器
+     */
 	@TargetApi(11)
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
@@ -168,8 +171,10 @@ public class CrimeFragment extends Fragment {
 		
 	}
 
+	/**
+	 * 响应Picker对话框，更新Crime的数据，更新按钮的文本
+	 */
 	@Override
-	//响应DatePicker对话框，更新Crime的数据，更新按钮的文本
 	public void onActivityResult(int requestCode, int resultCode, Intent data){
 		if(resultCode!= Activity.RESULT_OK) return;
 		if(requestCode==REQUEST_DATE){
@@ -187,15 +192,15 @@ public class CrimeFragment extends Fragment {
 
 	}
 
+	//??
 	public void returnResult(){
 		getActivity().setResult(Activity.RESULT_OK,null);
 	}
 
+	//下面是更新日期和时间按钮文字的方法
 	public void updateDate(){
 		mDateButton.setText(DateFormat.format("yyyy年MM月dd日 EEEE",mCrime.getDate()));
-
 	}
-
 	public void updateTime(){
 		mTimeButton.setText(DateFormat.format("kk:mm",mCrime.getDate()));
 	};

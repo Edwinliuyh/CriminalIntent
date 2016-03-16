@@ -24,10 +24,13 @@ import java.util.ArrayList;
  * 负责创建和解析JSON数据的工作
  */
 public class CriminalIntentJSONSerializer {
-        private Context mContext;
-        private String mFilename;
+    private Context mContext;
+    private String mFilename;
 
-        public CriminalIntentJSONSerializer(Context c, String f){
+    /**
+     * 构造JSONSerializer的方法
+     */
+    public CriminalIntentJSONSerializer(Context c, String f){
             mContext=c;
             mFilename=f;
         }

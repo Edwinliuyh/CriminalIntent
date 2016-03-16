@@ -8,13 +8,18 @@ import android.support.v4.app.FragmentActivity;
 import com.bignerdranch.android.criminalintent.R;
 
 /**
- * 通用的托管单一Fragment的Activity模板
- * 抽象类，抽象类的子类必须要实现抽象类中未完成的方法createFragment()
+ * 抽象类，通用的托管单一Fragment的Activity模板
  */
 public abstract class SingleFragmentActivity extends FragmentActivity {
 
+    /**
+     * 抽象类的子类必须要实现抽象类中未完成的方法
+     */
     protected abstract Fragment createFragment();
 
+    /**
+     * 在OnCreat，生成空布局的fragment作为Container
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

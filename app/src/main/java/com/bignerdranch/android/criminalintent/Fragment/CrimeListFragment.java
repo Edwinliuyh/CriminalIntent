@@ -27,9 +27,6 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-/**
- * Crimes的控制层
- */
 public class CrimeListFragment extends ListFragment {
     private ArrayList<Crime> mCrimes;
     private Button addCrimeButton;
@@ -38,7 +35,7 @@ public class CrimeListFragment extends ListFragment {
     private static final int REQUEST_CRIME=1;
 
     /**
-     * 生成视图
+     * 在onCreate，数据模型的初始化
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +50,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     * 根据变量mSubtitleVisible的值设置子标题
+     * 在onCreateView，根据变量mSubtitleVisible的值，设置子标题
      */
     @TargetApi(11)
     @Override
@@ -68,7 +65,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     * 用于列表的空视图
+     * 在onStart，增加用于列表的空视图
      */
     @Override
     public void onStart() {
@@ -90,7 +87,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     *设置点击事件
+     *点击List的子项，跳转去响应的CrimePager页面
      */
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
@@ -100,6 +97,7 @@ public class CrimeListFragment extends ListFragment {
         startActivityForResult(i,REQUEST_CRIME);//启动CrimeActivity
     }
 
+    //??
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode==REQUEST_CRIME){
@@ -108,7 +106,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     * 实例化生成选项菜单
+     * 实例化生成右上角选项菜单
      */
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
@@ -121,7 +119,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     *响应菜单项选择事件
+     *右上角菜单项的选择事件响应
      */
     @TargetApi(11)
     @Override
@@ -152,7 +150,7 @@ public class CrimeListFragment extends ListFragment {
 
 
     /**
-     *
+     *内部类CrimeAdapter + convertView
      */
     private class CrimeAdapter extends ArrayAdapter<Crime>{
         public CrimeAdapter(ArrayList<Crime> crimes){
@@ -181,7 +179,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     * 恢复视图时，用adpter通知模型层数据变更，重新加载
+     * onRsume时，用adpter通知变更，重新加载模型层数据
      */
     @Override
     public void onResume() {

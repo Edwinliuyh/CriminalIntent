@@ -59,6 +59,7 @@ public class Crime {
 		return json;
 	}
 
+	//下面是所有数据域的get方法和set方法
 	public UUID getId() {
 		return mId;
 	}

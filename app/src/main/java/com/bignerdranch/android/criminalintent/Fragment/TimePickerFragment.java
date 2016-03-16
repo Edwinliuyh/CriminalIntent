@@ -18,14 +18,16 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Created by dell on 2016/3/12.
+ * 修改时间的对话框
  */
 public class TimePickerFragment extends DialogFragment {
     public static final String EXTRA_TIME =
             "com.bignerdranch.android.criminalintent.time";
     private Date mDate;
 
-    //CrimeFragment传递数据给TimePickerFragment的实例，初始化PickerFragment的args
+    /**
+     * 用CrimeFragment传递给TimePickerFragment的数据，创建PickerFragment实例（Bundle）
+     */
     public static TimePickerFragment newInstance(Date date){
         Bundle args= new Bundle();
         args.putSerializable(EXTRA_TIME,date);
@@ -34,6 +36,9 @@ public class TimePickerFragment extends DialogFragment {
         return fragment;
     };
 
+    /**
+     *在onCreateDialog，初始化picker的数据，监听picker的变化
+     */
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -73,7 +78,9 @@ public class TimePickerFragment extends DialogFragment {
                 .create();
     }
 
-    //sendResult方法回调目标fragment的onActivityResult
+    /**
+     * sendResult方法，回调目标fragment的onActivityResult
+     */
     private void sendResult(int resultCode){
         if (getTargetFragment()==null)
             return;

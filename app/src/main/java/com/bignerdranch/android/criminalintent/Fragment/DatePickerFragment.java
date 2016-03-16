@@ -19,14 +19,16 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * Created by dell on 2016/3/10.  212
+ * 修改日期的对话框
  */
 public class DatePickerFragment extends DialogFragment {
     public static final String EXTRA_DATE =
             "com.bignerdranch.android.criminalintent.date";
     private Date mDate;
 
-    //CrimeFragment传递数据给DatePickerFragment的实例，初始化PickerFragment的args
+    /**
+     * 用CrimeFragment传递给DatePickerFragment的数据，创建PickerFragment实例（Bundle）
+     */
     public static DatePickerFragment newInstance(Date date){
         Bundle args = new Bundle();
         args.putSerializable(EXTRA_DATE,date);
@@ -34,6 +36,10 @@ public class DatePickerFragment extends DialogFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+    /**
+     *在onCreateDialog，初始化picker的数据，监听picker的变化
+     */
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -72,7 +78,9 @@ public class DatePickerFragment extends DialogFragment {
                 .create();
     }
 
-    //sendResult方法回调目标fragment的onActivityResult
+    /**
+     * sendResult方法，回调目标fragment的onActivityResult
+     */
     private void sendResult(int resultCode){
         if(getTargetFragment()==null)
             return;

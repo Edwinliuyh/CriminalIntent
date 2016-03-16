@@ -19,7 +19,7 @@ public class CrimeLab {
     private ArrayList<Crime> mCrimes;
 
     /**
-     * 构造方法
+     * CrimeLab的构造方法
      */
     public CrimeLab(Context appContext) {
         mAppContext = appContext;
