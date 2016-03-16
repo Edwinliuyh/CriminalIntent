@@ -61,10 +61,17 @@ public class CrimeLab {
     }
 
     /**
-     *添加新的Crime的方法
+     *增加Crime的方法
      */
     public void addCrime (Crime c){
         mCrimes.add(c);
+    }
+
+    /**
+     * 删除Crime的方法
+     */
+    public void deleteCrime(Crime c){
+        mCrimes.remove(c);
     }
 
     /**

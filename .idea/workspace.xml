@@ -23,16 +23,58 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a24a85e3-0871-41d5-9b89-e73ed15c34d2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_activated.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/crime_list_item_context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/SingleFragmentActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Activity/SingleFragmentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment$CrimeAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment$CrimeAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/Crime.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/Crime.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/CrimeLab.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/CrimeLab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bignerdranch/android/criminalintent/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_a3b77ef92ce1738ed255f52bba9e6e64fc092f86.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_a3b77ef92ce1738ed255f52bba9e6e64fc092f86.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/Crime.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/Crime.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/bignerdranch/android/criminalintent/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/bignerdranch/android/criminalintent/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/list_item_crime.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/list_item_crime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" />
     </list>
     <ignored path="CriminalIntent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +106,49 @@
     <favorites_list name="CriminalIntent" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CrimeListFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#onCreate#0;class#CrimeListFragment#0" expanded="false" />
+                <element signature="method#onItemCheckedStateChanged#0;class#2801:4669" expanded="false" />
+                <element signature="method#onPrepareActionMode#0;class#2801:4669" expanded="false" />
+                <element signature="method#onDestroyActionMode#0;class#2801:4669" expanded="false" />
+                <element signature="class#CrimeAdapter#0;class#CrimeListFragment#0" expanded="false" />
+                <marker date="1458144280196" expanded="true" signature="1526:1538" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list_item_crime.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14869888">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="background_activated.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background_activated.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.7586207">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1652,7 +1736,6 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/SingleFragmentActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Activity/CrimeActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/ids.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_date.xml" />
@@ -1665,15 +1748,19 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/fragment_crime.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_crime.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/Crime.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/DatePickerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Activity/SingleFragmentActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Activity/CrimeListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Activity/CrimePagerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/crime_list_item_context.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/background_activated.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/background_activated.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" />
       </list>
     </option>
   </component>
@@ -1985,6 +2072,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CriminalIntent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CriminalIntent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2152,19 +2269,22 @@
     <property name="device.picker.selection" value="DU2TAN15AD099634" />
     <property name="android.project.structure.last.selected" value="Project" />
     <property name="android.project.structure.proportion" value="0.15" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\res\menu" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bignerdranch.android.criminalintent" />
       <recent name="" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\res\layout-land" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bignerdranch.android.criminalintent" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\res\drawable" />
+      <recent name="C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\res\menu" />
       <recent name="C:\Users\dell\AndroidStudioProjects\CriminalIntent\app\src\main\res\layout-land" />
     </key>
   </component>
@@ -2464,15 +2584,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2859425" sideWeight="0.4936508" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26517573" sideWeight="0.4936508" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.413738" sideWeight="0.32380953" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.408867" sideWeight="0.6761905" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40734825" sideWeight="0.6761905" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2481,8 +2601,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28753993" sideWeight="0.5063492" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26825398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5638978" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44523808" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.547421" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2546,25 +2666,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/TimePickerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_time.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2686,14 +2787,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#onCreate#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onStart#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onListItemClick#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onResume#0;class#CrimeListFragment#0" expanded="false" />
-            <marker date="1458140542663" expanded="true" signature="1391:1403" placeholder="..." />
+            <element signature="method#onItemCheckedStateChanged#0;class#2801:4669" expanded="false" />
+            <element signature="method#onPrepareActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="method#onDestroyActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="class#CrimeAdapter#0;class#CrimeListFragment#0" expanded="false" />
+            <marker date="1458144280196" expanded="true" signature="1526:1538" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2726,14 +2826,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#onCreate#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onStart#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onListItemClick#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onResume#0;class#CrimeListFragment#0" expanded="false" />
-            <marker date="1458140542663" expanded="true" signature="1391:1403" placeholder="..." />
+            <element signature="method#onItemCheckedStateChanged#0;class#2801:4669" expanded="false" />
+            <element signature="method#onPrepareActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="method#onDestroyActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="class#CrimeAdapter#0;class#CrimeListFragment#0" expanded="false" />
+            <marker date="1458144280196" expanded="true" signature="1526:1538" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2819,16 +2918,6 @@
         <state vertical-scroll-proportion="0.20100503">
           <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24439919">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/ids.xml">
@@ -2918,19 +3007,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/fragment_crime_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38732395">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="e#389#412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/Crime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22948074">
@@ -2945,25 +3021,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46901172">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="method#CrimeLab#0;class#CrimeLab#0" expanded="false" />
-            <element signature="method#get#0;class#CrimeLab#0" expanded="false" />
-            <element signature="method#getCrime#0;class#CrimeLab#0" expanded="false" />
-            <element signature="method#saveCrimes#0;class#CrimeLab#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CriminalIntentJSONSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1340034">
           <caret line="64" column="74" selection-start-line="64" selection-start-column="74" selection-end-line="64" selection-end-column="74" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#CriminalIntentJSONSerializer#0;class#CriminalIntentJSONSerializer#0" expanded="false" />
             <element signature="method#saveCrimes#0;class#CriminalIntentJSONSerializer#0" expanded="false" />
             <element signature="method#loadCrimes#0;class#CriminalIntentJSONSerializer#0" expanded="false" />
@@ -2978,11 +3041,11 @@
           <folding>
             <element signature="method#newInstance#0;class#TimePickerFragment#0" expanded="false" />
             <element signature="method#onCreateDialog#0;class#TimePickerFragment#0" expanded="false" />
-            <element signature="e#2165#2516#0" expanded="true" />
-            <element signature="e#2515#2516#0" expanded="true" />
-            <element signature="e#2628#2654#0" expanded="true" />
-            <element signature="e#2761#2991#0" expanded="true" />
-            <element signature="e#2990#2991#0" expanded="true" />
+            <element signature="e#2165#2516#0" expanded="false" />
+            <element signature="e#2515#2516#0" expanded="false" />
+            <element signature="e#2628#2654#0" expanded="false" />
+            <element signature="e#2761#2991#0" expanded="false" />
+            <element signature="e#2990#2991#0" expanded="false" />
             <element signature="method#sendResult#0;class#TimePickerFragment#0" expanded="false" />
           </folding>
         </state>
@@ -3032,23 +3095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1959799">
-          <caret line="156" column="77" selection-start-line="156" selection-start-column="60" selection-end-line="156" selection-end-column="77" />
-          <folding>
-            <element signature="method#onCreate#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onStart#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onListItemClick#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#CrimeListFragment#0" expanded="false" />
-            <element signature="method#onResume#0;class#CrimeListFragment#0" expanded="false" />
-            <marker date="1458140542663" expanded="true" signature="1391:1403" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0335008">
@@ -3072,6 +3118,83 @@
             <element signature="class#2231:2765" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/fragment_crime_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41825095">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="e#389#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Model/CrimeLab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35135135">
+          <caret line="70" column="17" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding>
+            <element signature="method#CrimeLab#0;class#CrimeLab#0" expanded="false" />
+            <element signature="method#get#0;class#CrimeLab#0" expanded="false" />
+            <element signature="method#getCrime#0;class#CrimeLab#0" expanded="false" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="method#saveCrimes#0;class#CrimeLab#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/crime_list_item_context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4482758">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bignerdranch/android/criminalintent/Fragment/CrimeListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#onCreate#0;class#CrimeListFragment#0" expanded="false" />
+            <element signature="method#onItemCheckedStateChanged#0;class#2801:4669" expanded="false" />
+            <element signature="method#onPrepareActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="method#onDestroyActionMode#0;class#2801:4669" expanded="false" />
+            <element signature="class#CrimeAdapter#0;class#CrimeListFragment#0" expanded="false" />
+            <marker date="1458144280196" expanded="true" signature="1526:1538" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/background_activated.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.7586207">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14869888">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

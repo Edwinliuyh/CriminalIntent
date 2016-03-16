@@ -6,12 +6,16 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ActionMode;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -50,7 +54,9 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     * 在onCreateView，根据变量mSubtitleVisible的值，设置子标题
+     * 在onCreateView
+     * 根据变量mSubtitleVisible的值，设置子标题
+     * 为上下文菜单、上下文操作登记ListView，并处理兼容性问题
      */
     @TargetApi(11)
     @Override
@@ -60,6 +66,50 @@ public class CrimeListFragment extends ListFragment {
             if (mSubtitleVisible){
                 getActivity().getActionBar().setSubtitle(R.string.subtitle);
             }
+        }
+
+        ListView listView = (ListView) v.findViewById(android.R.id.list);
+        if(Build.VERSION.SDK_INT<Build.VERSION_CODES.HONEYCOMB){
+            registerForContextMenu(listView);//使用浮动的上下文菜单，登记ListView
+        }else{
+            listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);//自动使用上下文操作，listview可以多选
+            //设置MultiChoiceModeListener监听器
+            listView.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener(){
+                public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked){
+                //Required, but not used in this implementation
+                }
+                //ActionMode的回调，填充上下文操作栏的布局
+                public boolean onCreateActionMode(ActionMode mode, Menu menu){
+                    MenuInflater inflater = mode.getMenuInflater();
+                    inflater.inflate(R.menu.crime_list_item_context, menu);
+                    return true;
+                }
+                public boolean onPrepareActionMode(ActionMode mode, Menu menu){
+                    return false;
+                //Required, but not used in this implementation
+                }
+                //点击事件的响应
+                public boolean onActionItemClicked(ActionMode mode, MenuItem item){
+                    switch (item.getItemId()){
+                        case R.id.menu_item_delete_crime:
+                            CrimeAdapter adapter =(CrimeAdapter) getListAdapter();
+                            CrimeLab crimeLab= CrimeLab.get(getActivity());
+                            for (int i = adapter.getCount()-1; i>=0; i--){
+                                if (getListView().isItemChecked(i)){
+                                    crimeLab.deleteCrime(adapter.getItem(i));//所有选中的item(i)对应的crime都要删除
+                                }
+                            }
+                            mode.finish();
+                            adapter.notifyDataSetChanged();//adapter通知数据变更
+                            return true;
+                        default:
+                            return false;
+                    }
+                }
+                public void onDestroyActionMode(ActionMode mode){
+                //Required, but not used in this implementation
+                }
+            });
         }
         return v;
     }
@@ -119,7 +169,7 @@ public class CrimeListFragment extends ListFragment {
     }
 
     /**
-     *右上角菜单项的选择事件响应
+     *右上角选项菜单项的选择事件响应
      */
     @TargetApi(11)
     @Override
@@ -148,6 +198,31 @@ public class CrimeListFragment extends ListFragment {
         }
     }
 
+    /**
+     * 实例化生成上下文菜单
+     */
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
+        getActivity().getMenuInflater().inflate(R.menu.crime_list_item_context, menu);
+    }
+
+    /**
+     *监听上下文菜单项选择事件
+     */
+    @Override
+    public boolean onContextItemSelected(MenuItem item){
+        AdapterView.AdapterContextMenuInfo info=(AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        int position=info.position; //获取选中子项在数据集的位置信息
+        CrimeAdapter adapter = (CrimeAdapter) getListAdapter();
+        Crime crime = adapter.getItem(position);//根据位置获取对应的crime对象
+        switch(item.getItemId()){
+            case R.id.menu_item_delete_crime:
+                CrimeLab.get(getActivity()).deleteCrime(crime);//删除crime
+                adapter.notifyDataSetChanged();//更新显示的数据
+                return true;
+        }
+        return super.onContextItemSelected(item);
+    }
 
     /**
      *内部类CrimeAdapter + convertView
