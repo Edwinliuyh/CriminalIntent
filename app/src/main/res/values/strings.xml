@@ -17,6 +17,7 @@
     <string name="delete_crime">Delete</string>
     <string name="empty_view">没有crime记录显示</string>
     <string name="add_crime">创建crime记录</string>
+    <string name="take">Take!</string>
 
 
 </resources>

@@ -20,6 +20,10 @@
         "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\list_item_crime.xml"
     },
     {
+        "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_crime_camera.xml",
+        "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\fragment_crime_camera.xml"
+    },
+    {
         "merged": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_date.xml",
         "source": "C:\\Users\\dell\\AndroidStudioProjects\\CriminalIntent\\app\\src\\main\\res\\layout\\dialog_date.xml"
     }

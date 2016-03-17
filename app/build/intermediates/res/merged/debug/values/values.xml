@@ -17,6 +17,7 @@
     <string name="new_crime"> New Crime</string>
     <string name="show_subtitle">Show Subtitle</string>
     <string name="subtitle">If you see something, say something</string>
+    <string name="take">Take!</string>
     <string name="time_picker_title">发生的时间</string>
     <string name="title_activity_crime">CrimeActivity</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">

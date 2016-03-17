@@ -19,20 +19,23 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int add_crime=0x7f060008;
-        public static final int crim_date=0x7f060005;
-        public static final int crim_time=0x7f060006;
-        public static final int crime_list_item_dateText=0x7f06000b;
-        public static final int crime_list_item_solvedCheckBox=0x7f060009;
-        public static final int crime_list_item_titleTextView=0x7f06000a;
-        public static final int crime_solved=0x7f060007;
-        public static final int crime_title=0x7f060004;
+        public static final int add_crime=0x7f06000b;
+        public static final int crim_date=0x7f060006;
+        public static final int crim_time=0x7f060007;
+        public static final int crime_camera_surfaceView=0x7f060009;
+        public static final int crime_camera_takePictureButton=0x7f06000a;
+        public static final int crime_imageButton=0x7f060004;
+        public static final int crime_list_item_dateText=0x7f06000e;
+        public static final int crime_list_item_solvedCheckBox=0x7f06000c;
+        public static final int crime_list_item_titleTextView=0x7f06000d;
+        public static final int crime_solved=0x7f060008;
+        public static final int crime_title=0x7f060005;
         public static final int dialog_date_datePicker=0x7f060002;
         public static final int dialog_time_timepicker=0x7f060003;
         public static final int fragmentContainer=0x7f060001;
-        public static final int menu_item_delete_crime=0x7f06000c;
-        public static final int menu_item_new_crime=0x7f06000d;
-        public static final int menu_item_show_subtitle=0x7f06000e;
+        public static final int menu_item_delete_crime=0x7f06000f;
+        public static final int menu_item_new_crime=0x7f060010;
+        public static final int menu_item_show_subtitle=0x7f060011;
         public static final int viewPaper=0x7f060000;
     }
     public static final class layout {
@@ -40,8 +43,9 @@ public final class R {
         public static final int dialog_date=0x7f030001;
         public static final int dialog_time=0x7f030002;
         public static final int fragment_crime=0x7f030003;
-        public static final int fragment_crime_list=0x7f030004;
-        public static final int list_item_crime=0x7f030005;
+        public static final int fragment_crime_camera=0x7f030004;
+        public static final int fragment_crime_list=0x7f030005;
+        public static final int list_item_crime=0x7f030006;
     }
     public static final class menu {
         public static final int crime_list_item_context=0x7f080000;
@@ -62,8 +66,9 @@ public final class R {
         public static final int new_crime=0x7f07000b;
         public static final int show_subtitle=0x7f07000c;
         public static final int subtitle=0x7f07000d;
-        public static final int time_picker_title=0x7f07000e;
-        public static final int title_activity_crime=0x7f07000f;
+        public static final int take=0x7f07000e;
+        public static final int time_picker_title=0x7f07000f;
+        public static final int title_activity_crime=0x7f070010;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

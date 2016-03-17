@@ -1,9 +1,9 @@
 package com.bignerdranch.android.criminalintent.Activity;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 
 import com.bignerdranch.android.criminalintent.R;
 
@@ -25,8 +25,8 @@ public abstract class SingleFragmentActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
 
-        FragmentManager fm=getFragmentManager();
-        android.app.Fragment fragment =fm.findFragmentById(R.id.fragmentContainer);
+        FragmentManager fm=getSupportFragmentManager();
+        Fragment fragment =fm.findFragmentById(R.id.fragmentContainer);
 
         if(fragment==null){
             fragment=createFragment();

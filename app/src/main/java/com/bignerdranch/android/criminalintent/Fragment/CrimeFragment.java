@@ -4,6 +4,8 @@ package com.bignerdranch.android.criminalintent.Fragment;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,7 +26,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
+import com.bignerdranch.android.criminalintent.Activity.CrimeCameraActivity;
 import com.bignerdranch.android.criminalintent.Activity.CrimeListActivity;
 import com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity;
 import com.bignerdranch.android.criminalintent.Model.Crime;
@@ -42,6 +46,7 @@ public class CrimeFragment extends Fragment {
 	private Button mDateButton;
 	private Button mTimeButton;
 	private CheckBox mSolvedCheckBox;
+	private ImageButton mPhotoButton;
 	public static final String EXTRA_CRIME_ID=
 			"com.bignerdranch.android.criminalintent.crime_id";
 	private static final String DIALOG_DATE="date";
@@ -154,7 +159,26 @@ public class CrimeFragment extends Fragment {
 				mCrime.setSolved(isChecked);
 			}
 		});
-		
+
+
+		mPhotoButton=(ImageButton) v.findViewById(R.id.crime_imageButton);
+		mPhotoButton.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v){
+				Intent i = new Intent(getActivity(), CrimeCameraActivity.class);
+				startActivity(i);//打开相机
+			}
+		});
+		//通过PackageManager，检查设备是否带有相机
+		PackageManager pm = getActivity().getPackageManager();
+		boolean hasACamera= pm.hasSystemFeature(PackageManager.FEATURE_CAMERA)||
+				pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_FRONT)||
+				Camera.getNumberOfCameras()>0;
+		//如果前后相机都不存在，禁用相机
+		if (!hasACamera){
+			mPhotoButton.setEnabled(false);
+		}
+
 		return v;
 		
 	}
