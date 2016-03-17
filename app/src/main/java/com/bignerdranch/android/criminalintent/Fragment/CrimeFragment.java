@@ -13,7 +13,10 @@ import android.support.v4.app.NavUtils;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +25,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import com.bignerdranch.android.criminalintent.Activity.CrimeListActivity;
+import com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity;
 import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
 import com.bignerdranch.android.criminalintent.R;
@@ -66,23 +71,6 @@ public class CrimeFragment extends Fragment {
 				.getSerializable(EXTRA_CRIME_ID);
 		mCrime = CrimeLab.get(getActivity()).getCrime(crimeId);
 		setHasOptionsMenu(true);//开启右上角选项菜单
-	}
-
-	/**
-	 * 响应图标Home键，向上导航的方法
-     */
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item){
-		switch (item.getItemId()){
-			case android.R.id.home:
-				//如果元数据中指定了父activity，导航至父activity界面
-				if (NavUtils.getParentActivityName(getActivity())!=null){
-					NavUtils.navigateUpFromSameTask(getActivity());
-				}
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
-		}
 	}
 
 	/**
@@ -191,6 +179,42 @@ public class CrimeFragment extends Fragment {
 		}
 
 	}
+
+
+
+	/**
+	 * 实例化生成右上角选项菜单
+	 */
+	@Override
+	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+		super.onCreateOptionsMenu (menu, inflater);
+		inflater.inflate(R.menu.crime_list_item_context, menu);
+	}
+
+	/**
+	 * 事件响应
+	 * 响应图标Home键，向上导航的方法
+	 * 右上角选项菜单项的选择事件响应
+	 */
+	@TargetApi(11)
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()){
+			case android.R.id.home:
+				//如果元数据中指定了父activity，导航至父activity界面
+				if (NavUtils.getParentActivityName(getActivity())!=null){
+					NavUtils.navigateUpFromSameTask(getActivity());
+				}
+				return true;
+			case R.id.menu_item_delete_crime:
+				CrimeLab.get(getActivity()).deleteCrime(mCrime);//删除crime
+				Intent i = new Intent(getActivity(),CrimeListActivity.class);
+				startActivity(i);
+				return true;
+			default:
+					return super.onOptionsItemSelected(item);
+			}
+		}
 
 	//??
 	public void returnResult(){
