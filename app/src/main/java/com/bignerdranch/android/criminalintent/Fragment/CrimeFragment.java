@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.support.v4.app.NavUtils;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -27,13 +29,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.bignerdranch.android.criminalintent.Activity.CrimeCameraActivity;
 import com.bignerdranch.android.criminalintent.Activity.CrimeListActivity;
 import com.bignerdranch.android.criminalintent.Activity.CrimePagerActivity;
 import com.bignerdranch.android.criminalintent.Model.Crime;
 import com.bignerdranch.android.criminalintent.Model.CrimeLab;
+import com.bignerdranch.android.criminalintent.Model.Photo;
 import com.bignerdranch.android.criminalintent.R;
+import com.bignerdranch.android.criminalintent.Utils.PictureUtils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -47,12 +52,17 @@ public class CrimeFragment extends Fragment {
 	private Button mTimeButton;
 	private CheckBox mSolvedCheckBox;
 	private ImageButton mPhotoButton;
+	private ImageView mPhotoView;
+
 	public static final String EXTRA_CRIME_ID=
 			"com.bignerdranch.android.criminalintent.crime_id";
 	private static final String DIALOG_DATE="date";
 	private static final String DIALOG_TIME="time";
+	private static final String DIALOG_IMAGE = "image";
 	private static final int REQUEST_DATE=0;
 	private static final int REQUEST_TIME=1;
+	private static final int REQUEST_PHOTO =2;
+	private static final String TAG ="CrimeFragment";
 
 	/**
 	 * 将crimeId放入返回的CrimeFragment实例（Bundle）
@@ -79,12 +89,30 @@ public class CrimeFragment extends Fragment {
 	}
 
 	/**
-	 * 在onPause()方法中调用保存数据的方法
+	 * 在onStart加载图片
+	 */
+	@Override
+	public void onStart(){
+		super.onStart();
+		showPhoto();
+	}
+
+	/**
+	 * 在onPause中调用保存数据的方法
 	 */
 	@Override
 	public void onPause(){
 		super.onPause();
 		CrimeLab.get(getActivity()).saveCrimes();
+	}
+
+	/**
+	 * 在onStop卸载图片，释放内存
+	 */
+	@Override
+	public void onStop(){
+		super.onStop();
+		PictureUtils.cleanImageView(mPhotoView);
 	}
 
 	/**
@@ -166,9 +194,25 @@ public class CrimeFragment extends Fragment {
 			@Override
 			public void onClick(View v){
 				Intent i = new Intent(getActivity(), CrimeCameraActivity.class);
-				startActivity(i);//打开相机
+				startActivityForResult(i, REQUEST_PHOTO);//打开相机
 			}
 		});
+
+		mPhotoView=(ImageView) v.findViewById(R.id.crime_imageView);
+		mPhotoView.setOnClickListener(new View.OnClickListener(){
+			public void onClick(View v){
+				Photo p = mCrime.getPhoto();
+				if(p==null) return;
+
+				FragmentManager fm =getActivity().getSupportFragmentManager();
+				String path = getActivity()
+						.getFileStreamPath(p.getFilename()).getAbsolutePath();
+				//用绝对路径path创建对话框ImageFragment实例，将它加入到FragmentManager
+				ImageFragment.newInstance(path)
+						.show(fm, DIALOG_IMAGE);
+			}
+		});
+
 		//通过PackageManager，检查设备是否带有相机
 		PackageManager pm = getActivity().getPackageManager();
 		boolean hasACamera= pm.hasSystemFeature(PackageManager.FEATURE_CAMERA)||
@@ -185,6 +229,7 @@ public class CrimeFragment extends Fragment {
 
 	/**
 	 * 响应Picker对话框，更新Crime的数据，更新按钮的文本
+	 * 响应拍照返回的结果
 	 */
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -195,12 +240,22 @@ public class CrimeFragment extends Fragment {
 			mCrime.setDate(date);
 			updateDate();
 		}
-		if(requestCode==REQUEST_TIME){
+		else if(requestCode==REQUEST_TIME){
 			Date date = (Date)data
 					.getSerializableExtra(TimePickerFragment.EXTRA_TIME);
 			mCrime.setDate(date);
 			updateTime();
+		}else if (requestCode==REQUEST_PHOTO){
+			//创建新的图片对象，并给crime设上图片
+			String filename=data
+					.getStringExtra(CrimeCameraFragment.EXTRA_PHOTO_FILENAME);
+			if (filename!=null){
+				Photo p = new Photo(filename);
+				mCrime.setPhoto(p);
+				showPhoto();
+			}
 		}
+
 
 	}
 
@@ -253,5 +308,20 @@ public class CrimeFragment extends Fragment {
 		mTimeButton.setText(DateFormat.format("kk:mm",mCrime.getDate()));
 	};
 
+	/**
+	 * 显示图片的方法
+	 */
+	private void showPhoto(){
+		Photo p =mCrime.getPhoto();
+		BitmapDrawable b = null;
+		//如果Crime对象的photo非空，
+		if(p!=null){
+			//根据（OpenFileOutput保存的）文件名，获得绝对路径
+			String path = getActivity().getFileStreamPath(p.getFilename()).getAbsolutePath();
+			//获得缩小后的图片
+			b = PictureUtils.getScaledDrawable(getActivity(),path);
+		}
+		mPhotoView.setImageDrawable(b);//给imageView设置图片
+	}
 
 }

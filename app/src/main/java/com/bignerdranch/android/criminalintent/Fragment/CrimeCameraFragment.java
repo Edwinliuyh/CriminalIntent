@@ -1,6 +1,9 @@
 package com.bignerdranch.android.criminalintent.Fragment;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,16 +18,21 @@ import android.widget.Button;
 
 import com.bignerdranch.android.criminalintent.R;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by dell on 2016/3/17.
  */
 public class CrimeCameraFragment extends Fragment{
     private static final String TAG = "CrimeCameraFragment";
+    public static final String EXTRA_PHOTO_FILENAME=
+            "com.bignerdranch.android.criminalintent.photo_filename";
     private Camera mCamera ;
     private SurfaceView mSurfaceView;
+    private View mProgressContainer;
 
     /**
      * 在onCreateView，引入布局获得控件
@@ -39,7 +47,9 @@ public class CrimeCameraFragment extends Fragment{
                 .findViewById(R.id.crime_camera_takePictureButton);
         takePictureButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                getActivity().finish();
+                if (mCamera !=null){
+                    mCamera.takePicture(mShutterCallback, null, mJpegCallback);
+                }
             }
         });
 
@@ -71,7 +81,9 @@ public class CrimeCameraFragment extends Fragment{
                 if (mCamera==null) return;
                 Camera.Parameters parameters = mCamera.getParameters();
                 Camera.Size s = getBestSupportedSize(parameters.getSupportedPreviewSizes(), w, h);//找出最佳预览尺寸
-                parameters.setPreviewSize(s.width, s.height);//设置相机预览大小
+                parameters.setPreviewSize(s.width, s.height);//设置相机预览的尺寸
+                s = getBestSupportedSize(parameters.getSupportedPictureSizes(), w,h);
+                parameters.setPictureSize(s.width, s.height);//设置要创建的图片尺寸
                 mCamera.setParameters(parameters);
                 try{
                     mCamera.startPreview();
@@ -82,6 +94,10 @@ public class CrimeCameraFragment extends Fragment{
                 }
             }
         });
+
+        mProgressContainer= v.findViewById(R.id.crime_camera_progressContainer);
+        mProgressContainer.setVisibility(View.INVISIBLE);//进度条容器不可见
+
         return v;
     }
 
@@ -128,4 +144,52 @@ public class CrimeCameraFragment extends Fragment{
         }
         return bestSize;
     }
+
+    /**
+     * 在ShutterCallback，进度条容器设为可见
+     */
+    @SuppressWarnings("deprecation")
+    private Camera.ShutterCallback mShutterCallback= new Camera.ShutterCallback(){
+        public void onShutter(){
+            mProgressContainer.setVisibility(View.VISIBLE);
+        }
+    };
+
+    /**
+     * 在PictureCallback，命名并保存已拍摄的JPEG图片文件
+     */
+    @SuppressWarnings("deprecation")
+    private Camera.PictureCallback mJpegCallback = new Camera.PictureCallback(){
+        public void onPictureTaken(byte[] data, Camera camera){
+            //随机生成文件名
+            String filename = UUID.randomUUID().toString() + ".jpg";
+            //保存jpeg数据到手机内存
+            FileOutputStream os=null;
+            boolean success = true;
+            try{
+                os= getActivity().openFileOutput(filename, Context.MODE_PRIVATE);
+                os.write(data);
+            }catch(Exception e){
+                Log.e(TAG,"Error writing to file"+filename, e);
+                success = false;
+            }finally{
+                try{
+                    if (os!=null)
+                        os.close();
+                }catch(Exception e){
+                    Log.e(TAG, "Error closing file"+filename, e);
+                    success=false;
+                }
+            }
+            //设置文件名到结果的intent
+            if(success){
+                Intent i =new Intent();
+                i.putExtra(EXTRA_PHOTO_FILENAME, filename);
+                getActivity().setResult(Activity.RESULT_OK,i);
+            }else{
+                getActivity().setResult(Activity.RESULT_CANCELED);
+            }
+            getActivity().finish();
+        }
+    };
 }
